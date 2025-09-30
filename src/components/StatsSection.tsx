@@ -40,43 +40,43 @@ const StatsSection = () => {
   const stats = [
     {
       icon: carIconNew,
-      title: "3 giełdy",
-      description: "Dodaj ofertę jeden raz, a my opublikujemy ją na giełdach Trans, TIMOCOM, Teleroute"
+      title: "3 burse",
+      description: "Adaugă oferta o singură dată, iar noi o vom publica pe bursele Trans, TIMOCOM, Teleroute"
     },
     {
       icon: timeIconNew,
       title: "70%",
-      description: "O tyle zredukujemy czas poświęcany na zarządzanie ofertami na giełdach"
+      description: "Cu atât vom reduce timpul dedicat gestionării ofertelor pe burse"
     },
     {
       icon: costIcon,
-      title: "50k zł",
-      description: "To koszt pracy wpisania 67 000 ofert na kilka giełd, zredukujemy to o min. 50%"
+      title: "12k EUR",
+      description: "Acesta este costul de muncă pentru introducerea a 67 000 de oferte pe mai multe burse, vom reduce acest cost cu min. 50%"
     },
     {
       icon: clickIcon,
       title: "1 x",
-      description: "Kliknij raz, aby odświeżyć lub usunąć wiele ofert na 3 giełdach naraz"
+      description: "Click o dată pentru a reîmprospăta sau șterge multe oferte pe 3 burse deodată"
     },
     {
       icon: implementationIcon,
       title: "30 min.",
-      description: "Tylko tyle zajmie wdrożenie nowego narzędzia w firmie/zespole."
+      description: "Doar atât va dura implementarea noii unelte în companie/echipă."
     },
     {
       icon: publishIcon,
       title: "< 1 min.",
-      description: "Opublikujesz ofertę na 3 giełdy + wyślesz mailing z listą ładunków"
+      description: "Vei publica oferta pe 3 burse + vei trimite mailing cu lista de încărcături"
     },
     {
       icon: findIcon,
       title: "0 min.",
-      description: "Nie poświęcisz minuty na szukanie wolnych pojazdów, a zobaczysz wyniki z 2 giełd"
+      description: "Nu vei dedica niciun minut pentru căutarea de vehicule libere, iar vei vedea rezultatele din 2 burse"
     },
     {
       icon: priceIcon,
-      title: "~ 29zł",
-      description: "To średnia opłata miesięczna za konto użytkownika w CARGOseller"
+      title: "~ 7 EUR",
+      description: "Aceasta este taxa lunară medie pentru contul de utilizator în CARGOseller"
     }
   ];
 
@@ -87,7 +87,7 @@ const StatsSection = () => {
           cargo
         </span>
         <span style={{color: '#66BC98', fontSize: '42px', fontWeight: '600', letterSpacing: '1.26px', textTransform: 'lowercase'}}>seller</span>
-        <span style={{color: '#4D4D4D', fontSize: '42px', fontWeight: '600', letterSpacing: '1.26px', textTransform: 'lowercase'}}> w liczbach</span>
+        <span style={{color: '#4D4D4D', fontSize: '42px', fontWeight: '600', letterSpacing: '1.26px', textTransform: 'lowercase'}}> în cifre</span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 max-md:mt-10">
         {stats.map((stat, index) => (

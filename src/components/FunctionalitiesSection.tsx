@@ -12,14 +12,14 @@ const FunctionalitiesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
-    "Dodawanie ładunku",
-    "Zbieranie propozycji cenowych",
-    "Lista ładunków",
-    "Odświeżanie i usuwanie ładunków",
-    "Automatyczny mailing listy ładunków",
-    "Ładunki w mojej firmie",
-    "Integracje",
-    "Statystyki"
+    "Adăugare încărcătură",
+    "Colectare propuneri de preț",
+    "Lista încărcăturilor",
+    "Reîmprospătare și ștergere încărcături",
+    "Mailing automat listă încărcături",
+    "Încărcături în compania mea",
+    "Integrări",
+    "Statistici"
   ];
 
   const tabImages = [
@@ -34,20 +34,20 @@ const FunctionalitiesSection = () => {
   ];
 
   const tabDescriptions = [
-    "Dodaj ładunek szybciej dzięki opcjom szybkiego wybierania, archiwum czy szablonom, opublikuj nawet na 3 giełdach, uruchom automatyczne odświeżanie ofert i szukanie pojazdów na TIMOCOM, opcjonalnie wyślij mailing ze swoją listą ładunków do swoich zaufanych przewoźników - wszystko w jednym okienku.",
-    "System pobiera propozycje cenowe z giełdy TIMOCOM i kanału mailingowego od Twoich zaufanych przewoźników, dodatkowo pobiera z TIMOCOM oferty wolnych pojazdów w promieniu 100km od miejsca załadunku.",
-    "Główne okno z listą ładunków, pozwoli ci oszczędzić od 50-70% czasu. Z tego miejsca możesz usuwać, odświeżać, dodawać, edytować oferty, przeglądać propozycje cenowe oraz propozycje wolnych pojazdów, finalizować transakcje ze skutkiem na 3 giełdach.",
-    "Cykliczne odświeżenie ładunku to bardzo częsta praktyka u spedytorów uskuteczniająca sprzedaż. U nas proces odświeżania odbywa się automatycznie co 35 min. Opcjonalnie możesz odświeżyć ręcznie. Podobnie wygląda to z usuwaniem ofert - usuwasz wiele ofert lub pojedyncze oferty ze skutkiem na giełdach.",
-    "Powszechna praktyka, czyli wysyłanie maila z listą ładunków do swoich zaufanych przewoźników. Obecnie oddzielna czynność do wykonania obok wpisywania na giełdy. Nasz integrator sprawia, że tą czynność wykonasz przy okazji publikowania na giełdy oszczędzając czas i robiąc to komfortowo jak nigdy dotąd. System sam wygeneruje spersonalizowanego maila z wykazem ładunków.",
-    "Łatwo sprawdź co w Twojej firmie (we wszystkich oddziałach) jest obecnie wystawione na sprzedaż i jakimi kanałami sprzedaży. Możesz łatwo skontaktować się ze współpracownikiem w sprawie ładunku oraz wspierać kolegów/koleżanki wystawiając ładunek jako swój bez przepisywania go.",
-    "Integracja Twojego konta użytkownika z giełdami zajmie Ci mniej niż 3 minuty i jesteś gotowy optymalizować proces pracy i osiągać lepsze efekty w sprzedaży. Możesz również zintegrować swój system TMS z naszym systemem - to jedna prosta i szybka integracja zamiast rozbudowanych, oddzielnych integracji z każdą z giełd. Staniemy się dla Ciebie HUB'em integracyjnym - to nowoczesne podejście w świecie cyfrowych rozwiązań, które przyspiesza integracje i bardzo redukuje jej koszt.",
-    "Przejrzyj statystyki pokazujące jaki był łączny wolumen ładunków, które zostały dodane na sprzedaż. Dowiedz się, ile jest niesprzedanych ładunków i optymalizuj ten obszar. Porównuj miesiące, lata, przeglądaj dane o marży i przychodzie w rozbiciu na oddziały, całą firmę."
+    "Adaugă încărcătura mai rapid datorită opțiunilor de selecție rapidă, arhivă sau șabloane, publică chiar și pe 3 burse, activează reîmprospătarea automată a ofertelor și căutarea de vehicule pe TIMOCOM, opțional trimite mailing cu lista ta de încărcături către transportatorii tăi de încredere - totul într-o singură fereastră.",
+    "Sistemul preia propuneri de preț de la bursa TIMOCOM și din canalul de mailing de la transportatorii tăi de încredere, în plus preia din TIMOCOM oferte de vehicule libere într-o rază de 100km de la locul de încărcare.",
+    "Fereastra principală cu lista încărcăturilor îți va economisi 50-70% din timp. De aici poți șterge, reîmprospăta, adăuga, edita oferte, vizualiza propuneri de preț și propuneri de vehicule libere, finaliza tranzacții cu efect pe 3 burse.",
+    "Reîmprospătarea ciclică a încărcăturii este o practică foarte frecventă la expeditori care facilitează vânzarea. La noi procesul de reîmprospătare se realizează automat la fiecare 35 min. Opțional poți reîmprospăta manual. Similar se întâmplă cu ștergerea ofertelor - ștergi multe oferte sau oferte individuale cu efect pe burse.",
+    "Practică comună, adică trimiterea de email cu lista de încărcături către transportatorii tăi de încredere. În prezent activitate separată de realizat pe lângă introducerea pe burse. Integratorul nostru face ca această activitate să o realizezi cu ocazia publicării pe burse economisind timp și făcând-o confortabil ca niciodată. Sistemul va genera automat email personalizat cu lista de încărcături.",
+    "Verifică ușor ce este în compania ta (în toate sucursalele) expus în prezent pentru vânzare și prin ce canale de vânzare. Poți contacta ușor colaboratorul în legătură cu încărcătura și susține colegii expunând încărcătura ca fiind a ta fără să o rescrii.",
+    "Integrarea contului tău de utilizator cu bursele îți va lua mai puțin de 3 minute și ești gata să optimizezi procesul de lucru și să obții rezultate mai bune în vânzări. Poți integra și sistemul tău TMS cu sistemul nostru - este o integrare simplă și rapidă în loc de integrări complexe, separate cu fiecare bursă. Vom deveni pentru tine HUB de integrare - o abordare modernă în lumea soluțiilor digitale, care accelerează integrările și reduce foarte mult costul acestora.",
+    "Analizează statisticile care arată care a fost volumul total de încărcături care au fost adăugate pentru vânzare. Află câte încărcături nevândute sunt și optimizează acest domeniu. Compară luni, ani, vizualizează date despre marjă și venit pe sucursale, întreaga companie."
   ];
 
   return (
     <section id="funkcjonalnosci" className="w-full max-w-[1520px] mt-[131px] max-md:max-w-full max-md:mt-10 scroll-mt-24">
       <h2 className="text-czarny text-center text-[42px] font-barlow-condensed font-semibold tracking-[1.26px] max-md:max-w-full">
-        Funkcjonalności
+        Funcționalități
       </h2>
       <div className="flex w-full flex-col items-stretch text-lg text-[#4E4D4D] font-normal mt-20 max-md:max-w-full max-md:mt-10">
         <div className="flex w-full items-stretch gap-[40px_60px] flex-wrap rounded-2xl max-md:max-w-full">

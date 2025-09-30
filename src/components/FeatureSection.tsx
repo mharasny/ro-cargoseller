@@ -48,24 +48,24 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
 };
 const FeaturesContainer = () => {
   const features = [{
-    title: "Publikowanie ładunków spot na sprzedaż",
-    description: "W CARGOseller dodajesz ładunek jeden raz i wskazujesz, które narzędzia i kanały sprzedaży aktywujesz.",
-    features: ["wysyłka nawet na 3 giełdy transportowe - publikujesz ładunki do giełd w których masz konto", "Mailing 4.0 - automatyczne generowanie maila z listą ładunków do wybranych grup zaufanych podwykonawców"],
+    title: "Publicarea încărcăturilor spot pentru vânzare",
+    description: "În CARGOseller adaugi încărcătura o singură dată și indici ce unelte și canale de vânzare activezi.",
+    features: ["trimitere pe până la 3 burse de transport - publici încărcături pe bursele unde ai cont", "Mailing 4.0 - generare automată de email cu lista de încărcături către grupuri selectate de subcontractanți de încredere"],
     imageSrc: statsImage
   }, {
-    title: "Automatyczne szukanie wolnego pojazdu",
-    description: "Integracja CARGOseller z TIMOCOM pozwala na automatyczne szukanie wolnych pojazdów w promieniu 100km od miejsca załadunku ładunku, który dodano do CARGOseller.",
-    features: ["od teraz nie szukasz wolnych pojazdów manualnie, robi to za Ciebie algorytm", "znalezione wyniki wyświetlane są w kolumnie „Propozycje\" wraz z propozycjami cenowymi z innych systemów"],
+    title: "Căutare automată de vehicul liber",
+    description: "Integrarea CARGOseller cu TIMOCOM permite căutarea automată a vehiculelor libere într-o rază de 100km de la locul de încărcare al încărcăturii adăugate în CARGOseller.",
+    features: ["de acum nu mai cauți vehicule libere manual, algoritmul face asta pentru tine", "rezultatele găsite sunt afișate în coloana „Propuneri\" împreună cu propuneri de preț din alte sisteme"],
     imageSrc: searchVehicleImage
   }, {
-    title: "AI - szybciej, więcej, skuteczniej",
-    description: "Wklej TEKST zapytania, a system wykorzystując AI utworzy gotowe oferty. Dodaj OBRAZ na którym są oferty, a system także utworzy gotowe oferty w czasie szybszym niż człowiek.",
-    features: ["Praca z AI to sposób na poprawę efektywności i wyników finansowych bo zyskujesz czas", "Komfort pracy - nie przepisujesz ofert ręcznie"],
+    title: "AI - mai rapid, mai mult, mai eficient",
+    description: "Lipește TEXT-ul cererii, iar sistemul folosind AI va crea oferte gata. Adaugă IMAGINE pe care sunt oferte, iar sistemul va crea de asemenea oferte gata mai rapid decât omul.",
+    features: ["Lucrul cu AI este o modalitate de îmbunătățire a eficienței și rezultatelor financiare pentru că câștigi timp", "Confort în muncă - nu mai transcrii ofertele manual"],
     imageSrc: statisticsImage
   }, {
-    title: "Statystyki",
-    description: "Rozproszenie wolumenu ładunków spot na sprzedaż na mailach wielu pracowników uniemożliwia przeprowadzanie analiz. Agregowanie wszystkich ładunków spot na sprzedaż w systemie CARGOseller pozwala na dostarczenie kompletnych statystyk.",
-    features: ["statystyki w ujęciu czasowym", "liczbę ładunków wpisanych, sprzedanych"],
+    title: "Statistici",
+    description: "Dispersarea volumului de încărcături spot pentru vânzare pe emailurile multor angajați face imposibilă efectuarea analizelor. Agregarea tuturor încărcăturilor spot pentru vânzare în sistemul CARGOseller permite furnizarea de statistici complete.",
+    features: ["statistici în perspective temporale", "numărul de încărcături introduse, vândute"],
     imageSrc: aiFeatureImage
   }];
   return <section className="w-full max-w-[1520px] mt-[111px] max-md:max-w-full max-md:mt-16">
