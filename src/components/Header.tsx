@@ -9,25 +9,25 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const languages = [
-  { code: 'gb', name: 'English', url: 'https://cargoseller.co.uk', flag: '🇬🇧' },
   { code: 'at', name: 'Österreich', url: 'https://cargoseller.at', flag: '🇦🇹' },
-  { code: 'nl', name: 'Nederland', url: 'https://cargoseller.nl', flag: '🇳🇱' },
-  { code: 'pl', name: 'Polska', url: 'https://cargoseller.pl', flag: '🇵🇱' },
-  { code: 'cz', name: 'Česko', url: 'https://cargoseller.cz', flag: '🇨🇿' },
-  { code: 'sk', name: 'Slovensko', url: 'https://cargoseller.sk', flag: '🇸🇰' },
-  { code: 'es', name: 'Español', url: 'https://cargoseller.es', flag: '🇪🇸' },
-  { code: 'lt', name: 'Lietuvių', url: 'https://cargoseller.lt', flag: '🇱🇹' },
   { code: 'be', name: 'Belgique', url: 'https://cargoseller.be', flag: '🇧🇪' },
-  { code: 'fr', name: 'Français', url: 'https://cargoseller.fr', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', url: 'https://cargoseller.de', flag: '🇩🇪' },
+  { code: 'cz', name: 'Česko', url: 'https://cargoseller.cz', flag: '🇨🇿' },
+  { code: 'fr', name: 'France', url: 'https://cargoseller.fr', flag: '🇫🇷' },
+  { code: 'es', name: 'España', url: 'https://cargoseller.es', flag: '🇪🇸' },
+  { code: 'nl', name: 'Nederland', url: 'https://cargoseller.nl', flag: '🇳🇱' },
+  { code: 'lt', name: 'Lietuva', url: 'https://cargoseller.lt', flag: '🇱🇹' },
+  { code: 'de', name: 'Deutschland', url: 'https://cargoseller.de', flag: '🇩🇪' },
+  { code: 'pl', name: 'Polska', url: 'https://cargoseller.pl', flag: '🇵🇱' },
   { code: 'ro', name: 'România', url: 'https://cargoseller.ro', flag: '🇷🇴', active: true },
-  { code: 'it', name: 'Italiano', url: 'https://cargoseller.it', flag: '🇮🇹' },
+  { code: 'sk', name: 'Slovensko', url: 'https://cargoseller.sk', flag: '🇸🇰' },
+  { code: 'gb', name: 'United Kingdom', url: 'https://cargoseller.co.uk', flag: '🇬🇧' },
+  { code: 'it', name: 'Italia', url: 'https://cargoseller.it', flag: '🇮🇹' },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const activeLanguage = languages.find(lang => lang.active) || languages[11];
+  const activeLanguage = languages.find(lang => lang.active) || languages[9];
   const isHomePage = location.pathname === '/';
 
   const toggleMenu = () => {
