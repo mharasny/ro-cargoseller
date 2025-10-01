@@ -21,6 +21,7 @@ const languages = [
   { code: 'fr', name: 'Français', url: 'https://cargoseller.fr', flag: '🇫🇷' },
   { code: 'de', name: 'Deutsch', url: 'https://cargoseller.de', flag: '🇩🇪' },
   { code: 'ro', name: 'România', url: 'https://cargoseller.ro', flag: '🇷🇴', active: true },
+  { code: 'it', name: 'Italiano', url: 'https://cargoseller.it', flag: '🇮🇹' },
 ];
 
 const Header = () => {
