@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
   name: string;
@@ -9,6 +11,8 @@ interface FormData {
 }
 
 const ContactForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: '',
     company: '',
@@ -25,20 +29,39 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Formularul a fost trimis!');
-    
-    // Reset form
-    setFormData({
-      name: '',
-      company: '',
-      phone: '',
-      email: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Mesaj trimis!",
+        description: "Vă vom contacta în curând.",
+      });
+
+      setFormData({
+        name: '',
+        company: '',
+        phone: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Eroare",
+        description: "Nu am putut trimite mesajul. Vă rugăm să încercați din nou.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -109,10 +132,11 @@ const ContactForm = () => {
       
       <button
         type="submit"
-        className="justify-center items-stretch flex min-h-[51px] w-[210px] max-w-full flex-col text-white whitespace-nowrap text-center bg-[#66BC98] mt-6 px-8 py-3.5 rounded-3xl max-md:px-5 hover:bg-[#5aa085] transition-colors"
+        disabled={isSubmitting}
+        className="justify-center items-stretch flex min-h-[51px] w-[210px] max-w-full flex-col text-white whitespace-nowrap text-center bg-[#66BC98] mt-6 px-8 py-3.5 rounded-3xl max-md:px-5 hover:bg-[#5aa085] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <div className="text-white">
-          Trimite
+          {isSubmitting ? 'Se trimite...' : 'Trimite'}
         </div>
       </button>
     </form>
